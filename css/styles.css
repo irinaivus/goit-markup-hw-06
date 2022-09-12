@@ -589,6 +589,7 @@ img {
 .join {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .join-in-list {
   display: flex;
@@ -596,9 +597,10 @@ img {
   align-items: center;
 }
 
-.join-in {
+/* .join-in {
   margin-left: 70px;
-}
+  margin-right: 93px;
+} */
 .join-in-list {
   display: flex;
   justify-content: center;
@@ -627,6 +629,73 @@ img {
 .social-list-link-footer:focus .social-list-icon-join {
   fill: var(--fourth-color);
 }
+
+/*========================================= SUBSCRIBE ========================================= */
+.join-us {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--fourth-color);
+  margin-bottom: 20px;
+}
+.subcribe-form {
+  display: flex;
+  align-items: center;
+}
+
+.form-mail {
+  width: 358px;
+  height: 50px;
+  color: var(--fourth-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--seventh-color);
+  padding-left: 16px;
+  outline: none;
+}
+
+.form-mail::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* .subscribe-mail input {
+  background-color: var(--seventh-color);
+} */
+.icon-send {
+  fill: var(--fourth-color);
+  margin-left: 10px;
+}
+.button-subscribe {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  margin-left: 12px;
+  color: var(--fourth-color);
+  background-color: var(--third-color);
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  transition: background-color var(--transition-duration);
+}
+.button-subscribe:hover,
+.button-subscribe:focus {
+  background-color: var(--eighth-color);
+}
+
+/*========================================= Backdrop========================================= */
 .backdrop {
   position: fixed;
   z-index: 100;
@@ -643,6 +712,7 @@ img {
   pointer-events: none;
   opacity: 0;
 }
+/*========================================= Modal window ========================================= */
 .modal {
   position: absolute;
   top: 50%;
@@ -650,6 +720,7 @@ img {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
+  padding: 40px;
   background-color: var(--fourth-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -671,4 +742,162 @@ img {
 }
 .close-btn {
   fill: var(--sixth-color);
+  transition: fill var(--transition-duration);
+}
+.close-btn:hover,
+.close-btn:focus {
+  fill: var(--third-color);
+}
+
+/*========================================= Modal form ========================================= */
+
+.modal-form-check-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.feedback {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-input {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 42px;
+  transition: border-color var(--transition-duration);
+  cursor: pointer;
+  outline: none;
+  outline: none;
+}
+.modal-form-name {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--second-color);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.modal-form-line {
+  margin-bottom: 10px;
+}
+.privacy-agree {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+.conditions-agreement {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--third-color);
+}
+.modal-wrapper {
+  position: relative;
+  display: block;
+}
+
+.icon-modal-list {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: var(--main-color);
+  transition: fill var(--transition-duration);
+}
+
+.modal-form-input:focus + .icon-modal-list {
+  fill: var(--third-color);
+}
+
+.modal-form-input:focus {
+  border-color: var(--third-color);
+}
+.modal-form-comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  transition: border-color var(--transition-duration);
+  outline: none;
+  display: block;
+}
+
+.modal-comment {
+  margin-bottom: 20px;
+}
+.modal-form-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-comment:focus {
+  border-color: var(--third-color);
+}
+.icon-checkbox {
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  margin-right: 8.38px;
+}
+.icon-checkbox-modal {
+  display: none;
+}
+.modal-form-check:checked + .icon-checkbox {
+  background-color: var(--third-color);
+}
+.modal-form-check {
+  appearance: none;
+  position: absolute;
+}
+.modal-form-check:checked + .icon-checkbox .icon-checkbox-modal {
+  display: block;
+  fill: var(--fourth-color);
+}
+.modal-form-check:checked + .icon-checkbox {
+  border-color: var(--third-color);
+}
+
+.modal-form-submit {
+  background-color: var(--third-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  height: 50px;
+  width: 200px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color var(--transition-duration);
+}
+
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  background-color: var(--eighth-color);
 }
